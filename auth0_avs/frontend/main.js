@@ -17,6 +17,8 @@ const errorNode = div.appendChild(document.createTextNode(""))
 let client_id
 let domain
 let auth0
+let div_style
+
 
 const logout = async () => {
   auth0.logout({returnTo: getOriginUrl()})
@@ -90,6 +92,9 @@ function onRender(event) {
   
   client_id = data.args["client_id"]
   domain = data.args["domain"]
+  div_style = data.args["div_style"]
+
+  div.style = div_style
 
   Streamlit.setFrameHeight()
 }

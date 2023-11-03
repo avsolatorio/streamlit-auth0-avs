@@ -57,7 +57,7 @@ def getVerifiedSubFromToken(token, domain):
 
         return payload['sub']
 
-def login_button(clientId, domain,key=None, **kwargs):
+def login_button(clientId, domain, div_style=None, key=None, **kwargs):
     """Create a new instance of "login_button".
     Parameters
     ----------
@@ -76,7 +76,10 @@ def login_button(clientId, domain,key=None, **kwargs):
         User info
     """
 
-    user_info = _login_button(client_id=clientId, domain = domain, key=key, default=0)
+    if div_style is None:
+        div_style = "display: flex; flex-direction: column; color: rgb(104, 85, 224); font-weight: 600; margin: 0; padding: 10px"
+
+    user_info = _login_button(client_id=clientId, domain = domain, div_style=div_style, key=key, default=0)
     if not user_info:
         return False
     elif isAuth(response = user_info, domain = domain):
