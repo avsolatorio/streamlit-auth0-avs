@@ -5,7 +5,7 @@
 ![Example of Streamlit-Auth0|635x380](demo.gif?raw=true)
 
 ## Installation
-`pip install streamlit-auth0-component`
+`pip install streamlit-auth0-avs`
 
 ## Setup
 
@@ -19,7 +19,7 @@
 On Auth0 website start a "Single Page Web Application" and copy your client-id / domain (of form xxxx.us.auth0.com) into code below.
 
 ```
-from auth0_component import login_button
+from auth0_avs import login_button
 import streamlit as st
 
 clientId = "...."

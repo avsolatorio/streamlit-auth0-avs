@@ -20,6 +20,7 @@ let auth0
 
 const logout = async () => {
   auth0.logout({returnTo: getOriginUrl()})
+  Streamlit.setComponentValue(false)
   button.textContent = "Login"
   button.removeEventListener('click', logout)
   button.addEventListener('click', login)
