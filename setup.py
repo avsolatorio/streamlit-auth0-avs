@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="streamlit-auth0-avs",
-    version="0.0.1",
+    version="0.0.2",
     author="",
     author_email="",
     description="",
